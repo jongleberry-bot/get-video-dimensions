@@ -1,7 +1,6 @@
 
 var exec = require('mz/child_process').execFile;
 var assert = require('assert');
-var path = require('path');
 
 module.exports = function (filename) {
   return exec('ffprobe', [
@@ -9,7 +8,7 @@ module.exports = function (filename) {
     '-of', 'flat=s=_',
     '-select_streams', 'v:0',
     '-show_entries', 'stream=height,width',
-    path.resolve(filename)
+    filename
   ]).then(function (out) {
     var stdout = out[0].toString('utf8');
     var width = /width=(\d+)/.exec(stdout);
