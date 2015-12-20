@@ -6,10 +6,10 @@
   "license": "MIT",
   "repository": "mgmtio/get-video-dimensions",
   "dependencies": {
-    "mz": "^1.2.1"
+    "mz": "^2.1.0"
   },
   "devDependencies": {
-    "bluebird": "^2.9.6",
+    "bluebird": "^3.1.1",
     "istanbul": "0",
     "mocha": "2"
   },
